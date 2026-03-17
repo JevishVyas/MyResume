@@ -8,7 +8,7 @@ const projects = [
     title: "Metaverse OCULUS",
     category: "Virtual Reality (Client: Facebook)",
     tools: "Mobile VR, PC VR, Android Apps, Python Tooling",
-    image: "/images/oculus_vr.png",
+    image: import.meta.env.BASE_URL + "images/oculus_vr.png",
   }
 ];
 

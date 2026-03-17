@@ -11,16 +11,16 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
-const textureLoader = new THREE.TextureLoader();
+
 const imageUrls = [
-  "/images/java.png",
-  "/images/python.png",
-  "/images/selenium_color.png",
-  "/images/jira.png",
-  "/images/jenkins-original.svg",
-  "/images/git.png",
-  "/images/azure.png",
-  "/images/playwright.svg",
+  import.meta.env.BASE_URL + "images/java.png",
+  import.meta.env.BASE_URL + "images/python.png",
+  import.meta.env.BASE_URL + "images/selenium_color.png",
+  import.meta.env.BASE_URL + "images/jira.png",
+  import.meta.env.BASE_URL + "images/jenkins-original.svg",
+  import.meta.env.BASE_URL + "images/git.png",
+  import.meta.env.BASE_URL + "images/azure.png",
+  import.meta.env.BASE_URL + "images/playwright.svg",
 ];
 
 // Load an image/SVG and return a THREE.Texture with white background + colorful logo
