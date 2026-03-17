@@ -87,22 +87,23 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>FRONTEND</h3>
-              <h4>Building Interactive UIs</h4>
+              <h3>MANUAL TESTING</h3>
+              <h4>Ensuring Quality at Every Stage</h4>
               <p>
-                Crafting performant, responsive interfaces with modern frameworks.
-                From SPAs to micro-frontends, I deliver pixel-perfect experiences.
+                Performing end-to-end Functional, Smoke, Sanity, Regression and
+                Re-testing on Mobile VR, PC VR and Android Apps. Expertise in
+                Defect Life Cycle and JIRA-based bug tracking.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Material UI</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
+                <div className="what-tags">Functional Testing</div>
+                <div className="what-tags">Smoke Testing</div>
+                <div className="what-tags">Regression Testing</div>
+                <div className="what-tags">Sanity Testing</div>
+                <div className="what-tags">JIRA</div>
+                <div className="what-tags">ALM</div>
+                <div className="what-tags">Test Cases</div>
+                <div className="what-tags">Bug Reporting</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -126,22 +127,23 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BACKEND</h3>
-              <h4>Scalable Server Architecture</h4>
+              <h3>AUTOMATION TESTING</h3>
+              <h4>Faster Releases, Zero Compromises</h4>
               <p>
-                Designing robust APIs and microservices. From CMS platforms to
-                complex business logic, I build backends that scale.
+                Building robust automated test suites using Selenium, Playwright
+                and Core Java. Integrating CI/CD pipelines with Jenkins and
+                managing code via Git &amp; Azure DevOps.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">Microservices</div>
+                <div className="what-tags">Selenium WebDriver</div>
+                <div className="what-tags">Playwright</div>
+                <div className="what-tags">Core Java</div>
                 <div className="what-tags">Python</div>
+                <div className="what-tags">Jenkins</div>
+                <div className="what-tags">Git</div>
+                <div className="what-tags">Microsoft Azure</div>
+                <div className="what-tags">POM</div>
               </div>
               <div className="what-arrow"></div>
             </div>

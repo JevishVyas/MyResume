@@ -13,16 +13,47 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/java.png",
+  "/images/python.png",
+  "/images/selenium_color.png",
+  "/images/jira.png",
+  "/images/jenkins-original.svg",
+  "/images/git.png",
+  "/images/azure.png",
+  "/images/playwright.svg",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+
+// Load an image/SVG and return a THREE.Texture with white background + colorful logo
+function loadLogoTexture(url: string): THREE.Texture {
+  const size = 512;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d")!;
+  // Fill white background
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, size, size);
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.minFilter = THREE.LinearMipmapLinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.generateMipmaps = true;
+  const img = new Image();
+  img.crossOrigin = "anonymous";
+  img.onload = () => {
+    // Redraw white background
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, size, size);
+    // Draw colorful logo centered with padding
+    const padding = size * 0.15;
+    ctx.drawImage(img, padding, padding, size - padding * 2, size - padding * 2);
+    texture.needsUpdate = true;
+  };
+  img.src = url;
+  return texture;
+}
+
+const textures = imageUrls.map((url) => loadLogoTexture(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
@@ -152,23 +183,23 @@ const TechStack = () => {
     };
   }, []);
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
-          map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
-        })
-    );
+    return textures.map((texture) => {
+      return new THREE.MeshPhysicalMaterial({
+        map: texture,
+        metalness: 0.05,
+        roughness: 0.2,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.05,
+      });
+    });
   }, []);
 
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
+      <p style={{ textAlign: 'center', margin: '20px 0', fontSize: '1.2rem', fontWeight: '500' }}>
+        Core JAVA, Python, Selenium Web driver, API, Jira, ALM, POM, Jenkins, GIT, Microsoft Azure, Playwright, MCP
+      </p>
 
       <Canvas
         shadows
